@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<display-name>02-Login</display-name>
+	
+	<!-- PÁGINA INICIAL DA APLICAÇÃO -->
+	
+	
+	<welcome-file-list>
+	<!-- Para configurar a pagina inicial, coloca -la aqui no welcome-file-list -->
+	<!-- Esse primeiro index foi o que eu criei, as paginas mais abaixos não são necessárias ! -->
+	
+	<welcome-file>index.html</welcome-file>
+	
+	<!--Páginas que não são necessarias  
+	
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		
+	 -->
+	 
+	 	
+	</welcome-file-list>
+	
+	
+	<!-- MAPEAR A ULR PARA A SERVLET -->
+  
+  <servlet>
+   <servlet-name>formulario</servlet-name>
+   <servlet-class>br.com.fiap.servlet.IndexServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+   <servlet-name>formulario</servlet-name>
+   <url-pattern>/logar</url-pattern>
+  </servlet-mapping>
+	
+	
+	
+	
+	<!-- CONFIGURAR A PÁGINA DE ERRO  -->
+	
+	<error-page>
+   <error-code>404</error-code>
+    <location>/erroPage.html</location>
+ </error-page>
+	
+	<!-- CONFIGURAÇÃO DE TIMEOUT DENTRO DO SISTEMA < SEM INTERAR COM O SISTEMA NO TMEPO LIMITE < O SISTEMA FECHA! -->
+	
+	<session-config>
+	 <session-timeout>10</session-timeout>
+	</session-config>
+ 
+ 
+
+
+ 
+</web-app>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<display-name>01-HelloWord</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	<!-- MAPEAR UMA URL PARA A SERVLET  -->
+	
+	<!-- Fala o nome da classe e coloca o endereço correspondente -->
+	<servlet>
+	 <servlet-name>pikachu</servlet-name>
+	  <servlet-class>br.com.fiap.servlet.HelloWorldServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	  <servlet-name>pikachu</servlet-name>
+	  <url-pattern>/enviar</url-pattern>
+	</servlet-mapping>
+
+	
+	<!-- Mapeando a classe da pagina da Servlet da Calculadora -->
+	
+	<servlet>
+	  <servlet-name>calc</servlet-name>
+	  <servlet-class>br.com.fiap.servlet.CalculadoraServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	 <servlet-name>calc</servlet-name>
+	 <url-pattern>/calculo</url-pattern>
+	</servlet-mapping>
+
+</web-app>
